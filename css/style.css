@@ -104,7 +104,7 @@ nav {
                 HERO SECTION
 =================================================== */
 #hero {
-    height: 100vh;
+    min-height: 100vh;
     margin-bottom: 20vh;
 }
 /* #hero::before {
@@ -231,15 +231,15 @@ nav {
     justify-content: center;
     align-items: center;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 10vh auto;
     padding-top: 150px;
 }
 .card-grid {
     display: flex;
     flex-wrap: wrap;
-    flex: 1;
-    justify-content: space-between;
-    margin-top: 10%;
+    justify-content: center;
+    max-width: 85%;
+    margin: 0 auto;
 }
 .project-card {
     display: flex;
@@ -247,8 +247,9 @@ nav {
     align-items: center;
     text-align: center;
     background-color: var(--card-bg);
-    width: 30%;
     padding: 20px;
+    margin: 30px;
+    max-width: 420px;
 }
 .card-header {
     color: var(--aqua-color);
@@ -270,7 +271,7 @@ nav {
 .code-btn,
 .demo-btn {
     padding: 20px 40px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     border-radius: 40px;
     letter-spacing: 0.1em;
 }
@@ -339,7 +340,15 @@ nav {
                 MEDIA QUERIES
 =================================================== */
 /* Mobile Screens */
-@media (max-width: 768px) {
+@media only screen and (max-width: 400px) {
+    .about-container {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    body {
+        margin: 0 auto;
+    }
     .container {
         width: 90%;
     }
@@ -366,7 +375,7 @@ nav {
         justify-content: flex-start;
         align-items: left;
         text-align: left;
-        border: 1px solid yellow;h;
+        border: 1px solid yellow;
     }
     .hero-header {
         font-size: 6rem;
@@ -381,12 +390,16 @@ nav {
         display: flex;
     }
     /* ABOUT */
+    #about {
+        margin: 0 8vw;
+    }
     .about-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
+        width: 100%;
     }
     .about-header {
         font-size: 4rem;
@@ -397,11 +410,11 @@ nav {
         margin-left: 0;
     }
     .about-cta {
-        display: none;
+        display: block;
     }
     .background-info {
-        width: 500px;
         margin-left: 0;
+        border: 3px solid yellow;
     }
     .background-header {
         text-align: center;
@@ -411,36 +424,7 @@ nav {
         text-align: justify;
     }
     /* PROJECTS */
-    .card-grid {
-        display: flex;
-        flex-direction: column;
-    }
     .project-card {
-        width: 100%;
         margin-bottom: 10vh;
-    }
-}
-/* Tablet/Small Laptop Screens */
-@media (max-width: 1200px) {
-    /* Navbar */
-    .nav-links li {
-        margin: 0;
-    }
-    /* Hero */
-    #hero::after {
-        display: none;
-    }
-    /* ABOUT */
-    .about-container {
-        display: flex;
-        flex-direction: column-reverse;
-        width: 100%;
-    }
-    .background-info {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid yellow;
-        width: 100%;
-        margin: 0;
     }
 }
