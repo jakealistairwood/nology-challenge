@@ -340,11 +340,6 @@ nav {
                 MEDIA QUERIES
 =================================================== */
 /* Mobile Screens */
-@media only screen and (max-width: 400px) {
-    .about-container {
-        width: 100%;
-    }
-}
 @media only screen and (max-width: 800px) {
     body {
         margin: 0 auto;
