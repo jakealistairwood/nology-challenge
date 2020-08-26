@@ -375,7 +375,6 @@ nav {
         justify-content: flex-start;
         align-items: left;
         text-align: left;
-        border: 1px solid yellow;
     }
     .hero-header {
         font-size: 6rem;
@@ -407,14 +406,15 @@ nav {
     .about-me {
         width: 500px;
         display: flex;
-        margin-left: 0;
+        margin: 0 auto;
     }
     .about-cta {
         display: block;
     }
     .background-info {
-        margin-left: 0;
-        border: 3px solid yellow;
+        margin: 0 auto;
+        width: 100%;
+        
     }
     .background-header {
         text-align: center;
